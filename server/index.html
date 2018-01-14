@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="fixed-to-top">
+	<header class="header" data-change>
+		<div class="container flex-container">
+			<button class="add-task" data-action="add">
+				<span></span>
+				<span></span>
+			</button>
+			<nav class="user-nav">
+				<a href="#">
+					<i class="icon icon-user"></i>
+					<div class="dropdown change-color">
+						<ul>
+							<li data-color="#ca457e"></li>
+							<li data-color="#e2cf0e"></li>
+							<li data-color="#f15555"></li>
+							<li data-color="#3aa2c7"></li>
+							<li data-color="#cc55b9"></li>
+							<li data-color="#00a1f1"></li>
+							<li data-color="#039221"></li>
+						</ul>
+					</div>
+				</a>
+				<a href="#"><i class="icon icon-logout"></i></a>
+			</nav>
+		</div>
+		</header>
+		<div class="toggle-class-type" >
+			<div class="container">
+				<div class="toggle-task-list" data-change-color>
+					<a href="#active-task " class="active" >Активные задачи</a>
+					<a href="#all-task" >Завершенные задачи</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main>
+		<div class="task-content active" id="active-task">
+			<div class="container">
+
+		   </div>
+		</div>
+		<div class="task-content" id="all-task">
+			<div class="container">
+
+		   </div>
+		</div>
+	</main>
+
+
+		<!--TASK-EDIT-->
+
+
+
+		<div class="overlay"></div>
+		<div class="edit-task">
+			<div class="close-btn">x</div>
+			<div class="container">
+				<div class="title">
+					<span>Новая задача</span>
+				</div>
+
+				<div class="input-group flex-container">
+					<div class="task-bell">
+						<div class="task-icon">
+							<span class="icon icon-bell" ></span>
+						</div>
+						<span>Оповестить за</span>
+					</div>
+					<input type="time" name="task-time" id="task-time">
+					<input type="date" name="task-date" id="task-date">
+				</div>
+				<div class="input-group">
+					<div class="textarea-wrap">
+						<textarea for="tast-text"></textarea>
+						<label>Ваша задача</label>
+						<div class="symbol-count">
+							<span class="count">0</span>
+							<span class="max-count">\1000</span>
+						</div>
+					</div>
+				</div>
+				<div class="input-group">
+					<button type="submit" class="add-task-btn" data-change="background-color">Добавить</button>
+				</div>
+			</div>
+		</div>
+
+
+		<!--PRELOADER-->
+		<div id="loading">
+			<div id="loading-center">
+				<div id="loading-center-absolute">
+					<div id="object"></div>
+				</div>
+			</div>
+
+		</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/Tasks.js"></script>
+
+<script src="js/edit.js"></script>
+	<script src="js/plugin.js"></script>
+</body>
+</html>
